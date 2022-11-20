@@ -1,3 +1,6 @@
+#Super dirty script to check your onedrive for any files with " - Copy" appended on the end, does a quick hash of both files and if the same, keeps the " - Copy" file as that was the one originally on your machine.
+
+
 $path = $env:OneDrive
 
 $copyList = (Get-ChildItem -path $path -recurse | where-object {$_.basename -like "* - Copy" })
